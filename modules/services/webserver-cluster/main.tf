@@ -33,6 +33,10 @@ resource "aws_launch_configuration" "example" {
     lifecycle {
         create_before_destroy = true
     }
+
+    tags = {
+        Version = "v0.0.2"
+    }
 }
 
 resource "aws_security_group" "instance" {
